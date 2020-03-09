@@ -22,3 +22,19 @@ for(var i = 0;i<second_word.length;i++){
 }
 
 mutation(["hello", "hey"]);
+
+
+
+////////
+
+
+function mutation(arr) {
+let word_one = arr[0].toLowerCase().split("");
+let word_second = arr[arr.length-1].toLowerCase().split("");
+for(var i = 0; i < word_second.length;i++){
+  if (word_one.indexOf(word_second[i]) < 0) return false;
+}
+  return true;
+}
+
+mutation(["hello", "hey"]);
