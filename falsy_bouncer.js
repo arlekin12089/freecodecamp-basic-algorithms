@@ -16,14 +16,12 @@ bouncer([7, "ate", "", false, 9]);
 
 function bouncer(arr) {
   let arrNew = [];
-    arr.map((a)=>{
-    if(Boolean(a) === false){
-      delete arr[a];
-      }else{
+  arr.map((a)=>{
+    if(Boolean(a)){
        arrNew.push(a);
       }
-    })   
-   return arrNew;
+    })    
+    return arrNew;
 }
 
 bouncer([false, null, 0, NaN, undefined, ""]);
